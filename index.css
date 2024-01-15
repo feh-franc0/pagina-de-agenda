@@ -1,0 +1,401 @@
+/* Reset padrão para melhorar a consistência entre os navegadores */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo global para o corpo do documento */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Container principal */
+.container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Conteúdo principal */
+.content {
+  width: 80%;
+  max-width: 1200px; /* Adicione um max-width para evitar que o conteúdo se estenda indefinidamente */
+  margin: 0 auto; /* Centralize o conteúdo na tela */
+}
+
+
+/* Formulário de Agendamento */
+.form-container {
+  display: flex;
+  flex-direction: row; /* Altere para empilhar os elementos verticalmente */
+  width: 100%;
+}
+
+.left-section, .right-section-gerenciador-consulta {
+  flex: 1;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: flex 0.3s ease;
+}
+
+
+.left-section {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  /* Remova min-height */
+}
+
+.right-section-gerenciador-consulta {
+  padding: 20px;
+  /* Remova min-height */
+}
+
+
+/* Título do Formulário */
+h2 {
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+/* Estilo para os rótulos de formulário */
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+/* Estilo para as caixas de seleção e inputs */
+.form-group select,
+.form-group input[type="time"],
+.form-group input[type="tel"],
+.form-group input[type="email"],
+.form-group input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Estilo para os botões do formulário */
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Calendário Container */
+.calendar-container {
+  /* Adicione qualquer estilo necessário */
+}
+
+/* Styled Container */
+.styled-container {
+  width: 100%;
+  height: 100%;
+}
+
+/* Styled Day */
+.styled-day {
+  padding: 10px;
+  /* border: 1px solid #ddd; */
+  background-color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.styled-day:hover {
+  background-color: #f0f0f0;
+}
+
+.styled-day.inactive {
+  color: #ccc;
+}
+
+/* Styled Modal */
+.styled-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Styled Modal Content */
+.styled-modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* Styled Close */
+.styled-close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.styled-close:hover, .styled-close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Styled Button */
+.styled-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+}
+
+.styled-button:hover {
+  background-color: #0056b3;
+}
+
+/* Styled Form */
+.styled-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styled Label */
+.styled-label {
+  margin-top: 10px;
+}
+
+/* Styled Input */
+.styled-input {
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+/* Styled Calendar */
+/* .styled-calendar {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
+  gap: 10px;
+  width: 100%;
+  padding: 20px;
+} */
+.styled-calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Adicionando estilos para os dias da semana no topo do calendário */
+.styled-day-of-week {
+  text-align: center;
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* Styled Header */
+.styled-header {
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Estilos para a navegação do calendário */
+.calendar-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.calendar-nav-button {
+  background: none;
+  border: none;
+  color: #000;
+  font-size: 20px;
+  cursor: pointer;
+  /* margin-right: 10px; */
+}
+
+.calendar-nav-button:hover {
+  text-decoration: underline;
+}
+
+#currentMonthYear {
+  color: #000;
+  font-size: 18px;
+}
+
+.form-group-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-group {
+  flex: 1;
+  margin-right: 10px;
+}
+
+/* Adapte conforme necessário para o estilo desejado */
+
+.header-gerenciador-consulta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.month-year-container-gerenciador-consulta {
+  flex: 1;
+}
+
+.nav-buttons-container-gerenciador-consulta {
+  display: flex;
+}
+
+.calendar-nav-button-gerenciador-consulta {
+  background: none;
+  border: none;
+  color: #000;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.styled-day-of-week-gerenciador-consulta {
+  text-align: center;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.styled-day-gerenciador-consulta:hover {
+  background-color: #f0f0f0;
+}
+
+/* Mantenha ou ajuste conforme necessário */
+
+.styled-day-with-atendimentos-gerenciador-consulta {
+  position: relative;
+}
+
+.atendimentos-counter-gerenciador-consulta {
+  background-color: #007bff;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-left: 5px; /* Adicione um espaçamento entre a data e o contador de atendimentos */
+}
+
+.right-section-gerenciador-consulta {
+  position: relative;
+  flex: 3;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  overflow: hidden; /* Remova a barra de rolagem aqui para evitar duplicidade */
+  /* height: 100vh; */
+}
+
+.styled-calendar-gerenciador-consulta {
+  display: grid;
+  grid-template-columns: repeat(7, 200px); /* Cada div do dia terá 200px de largura */
+  gap: 10px;
+  width: 100%;
+  height: 100%; /* Altura máxima de 100% da altura da viewport */
+  padding: 20px;
+  overflow-x: auto; /* Adiciona barra de rolagem horizontal apenas para o calendário */
+  box-sizing: border-box;
+}
+
+.styled-day-gerenciador-consulta {
+  width: 100%;
+  height: 120px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: end;
+  /* margin-bottom: 10px; */
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  border-radius: 8px;
+}
+
+/* Div para o Dia */
+.styled-day-number {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  /* justify-content: center; */
+  display: flex;
+  align-items: center;
+}
+
+/* Div para o Comentário do Dia */
+.styled-day-comment {
+  font-size: 14px;
+  color: #555;
+  /* justify-content: center; */
+  display: flex;
+  align-items: center;
+}
+
+#toggleButton {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  position: absolute;
+  left: 0%;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+#toggleButton:hover {
+  background-color: #0056b3;
+}
+
+@media screen and (max-width: 1200px) {
+  .content {
+    width: 100%;
+  }
+
+  .form-container {
+    flex-direction: column; /* Altere para empilhar os elementos verticalmente */
+  }
+  .styled-calendar {
+    padding: 0;
+  }
+
+  .submitButton {
+    width: 100%;
+  }
+}
+
